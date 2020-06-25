@@ -16,35 +16,35 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  detail: {
-    fontSize: 72,
-    color: "white",
-    textAlign: "center",
-    justifyContent: "center"
-  },
-  detaildark: {
-    fontSize: 48,
-    color: "black",
-    textAlign: "center",
-    justifyContent: "center"
-  },
+  // detail: {
+  //   fontSize: 72,
+  //   color: "white",
+  //   textAlign: "center",
+  //   justifyContent: "center"
+  // },
+  // detaildark: {
+  //   fontSize: 48,
+  //   color: "black",
+  //   textAlign: "center",
+  //   justifyContent: "center"
+  // },
   container: {
     flex: 1,
     backgroundColor: '#444',
   },
-  timerbar: {
-    borderWidth: 2,
-    color: "#fff",
-    alignContent: "center",
-    justifyContent: "center",
-    textAlign: "center",
-    flex: 0.45,
-    backgroundColor: "grey",
-    padding: 10,
-    borderRadius: 2.5,
-    fontSize: 50
+  // timerbar: {
+  //   borderWidth: 2,
+  //   color: "#fff",
+  //   alignContent: "center",
+  //   justifyContent: "center",
+  //   textAlign: "center",
+  //   flex: 0.45,
+  //   backgroundColor: "grey",
+  //   padding: 10,
+  //   borderRadius: 2.5,
+  //   fontSize: 50
 
-  },
+  // },
   scorecontainer: {
     borderWidth: 4,
     alignItems: "center",
@@ -53,30 +53,30 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     borderRadius: 2
   },
-  score: {
-    borderWidth: 2,
-    borderRadius: 10,
-    flex: 1,
-    width: 200,
-    height: "100%",
-    backgroundColor: "#fff",
-    padding: 2,
-    alignContent: "center",
-    justifyContent: "center",
-    textAlign: "center"
-  },
-  scorered: {
-    borderWidth: 2,
-    borderRadius: 10,
-    flex: 1,
-    width: 200,
-    height: "100%",
-    backgroundColor: "#ff0000",
-    padding: 2,
-    alignContent: "center",
-    justifyContent: "center",
-    textAlign: "center"
-  },
+  // score: {
+  //   borderWidth: 2,
+  //   borderRadius: 10,
+  //   flex: 1,
+  //   width: 200,
+  //   height: "100%",
+  //   backgroundColor: "#fff",
+  //   padding: 2,
+  //   alignContent: "center",
+  //   justifyContent: "center",
+  //   textAlign: "center"
+  // },
+  // scorered: {
+  //   borderWidth: 2,
+  //   borderRadius: 10,
+  //   flex: 1,
+  //   width: 200,
+  //   height: "100%",
+  //   backgroundColor: "#ff0000",
+  //   padding: 2,
+  //   alignContent: "center",
+  //   justifyContent: "center",
+  //   textAlign: "center"
+  // },
 
 
 });
