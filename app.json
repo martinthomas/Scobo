@@ -23,8 +23,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mtx.Scobo",
-      "bundleNumber": "1.0.0"
+      "bundleIdentifier": "com.mtx.Scobo"
     },
     "android": {
       "package": "com.mtx.Scobo"

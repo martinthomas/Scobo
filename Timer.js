@@ -27,33 +27,30 @@ export default class Timer extends React.Component {
     return StyleSheet.create({
       timerbar: {
         borderWidth: 2,
-        color: "#fff",
+        // color: "#fff",
         alignContent: "center",
         justifyContent: "center",
-        textAlign: "center",
         flex: 0.45,
         backgroundColor: "grey",
         padding: 10,
         borderRadius: 2.5,
-        fontSize: 50
       },
       timerexpire: {
         borderWidth: 2,
-        color: "#fff",
+        // color: "#fff",
         alignContent: "center",
         justifyContent: "center",
-        textAlign: "center",
         flex: 0.45,
         backgroundColor: "yellow",
         padding: 10,
         borderRadius: 2.5,
-        fontSize: 50
       },
       detail: {
         fontSize: 72,
         color: "white",
         textAlign: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        alignSelf:"center"
       },
   })};
 

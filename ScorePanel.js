@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View, Alert, Button } from 'react-native';
+import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default class ScorePanel extends React.Component {
     constructor(props){
@@ -17,40 +17,59 @@ export default class ScorePanel extends React.Component {
             background="red"
         }
     return StyleSheet.create({
-        detail: {
-            fontSize: 72,
-            color: color,
-            // textAlign: "center",
-            // justifyContent: "center",
-            // alignContent: "center",
-            flex: 1
-          },
-        
         score: {
-          borderWidth: 2,
-          borderRadius: 4,
-          flex: 1,
-        //   width: 200,
-          height: "100%",
-          backgroundColor: background,
-          padding: 1,
-          alignContent: "center",
-          justifyContent: "center",
-          textAlign: "center"
-        },
-        buttoncontainer: {
-            flex:0.25,
-            width: "50%",
-            flexDirection: "row",
+            borderWidth: 2,
+            borderRadius: 2,
+            // borderColor: "pink",
+            flex: 1,
+            // width: "50%",
+            // height: "100%",
+            backgroundColor: background,
+            padding: 1,
             alignContent: "center",
             justifyContent: "center",
-            textAlign: "center"
+          },
+
+        detail: {
+            fontSize: 172,
+            color: color,
+            // borderStyle: "dashed",
+            // borderColor: "grey",
+            // borderWidth: 1,
+            textAlign: "center",
+            justifyContent: "space-evenly",
+            alignContent: "center",
+            flex: 3,
+            // padding:100,
+            margin: 100
+          },
+        
+        buttoncontainer: {
+            flex:1,
+            width: "100%",
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems:"stretch",
+            // borderWidth: 1,
+            borderColor:"black",
+            // padding:"100",
+            margin:"4"
           },
         button: {
-            flex: 1,
+            fontSize: 64,
+            flex: 2,
+            color: "black",
             width: "100%",
-            height: "100%"
-            // flexGrow: true,
+            height: "100%",
+            borderStyle:"solid",
+            // borderWidth:1,
+            borderColor:"orange",
+            paddingVertical:"10",
+            padding:10,
+            textAlign:"center",
+            margin: "100",
+            padding:"100"
+
         }
     }
     )
@@ -65,12 +84,11 @@ subPoint = () => {
 }
     render() {
         return (
-            
             <View style={this.styles.score}>
                 <Text style={this.styles.detail} >{this.state.score}</Text>
                 <View style={this.styles.buttoncontainer}>
-                <Button  style={this.styles.button} title="+1" onPress={ this.addPoint} />
-                <Button  style={this.styles.button} title="-1" onPress={ this.subPoint} />
+                    <TouchableOpacity onPress={ this.addPoint} ><Text style={this.styles.button}>+1</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={ this.subPoint} ><Text style={this.styles.button}>-1</Text></TouchableOpacity>
                 </View>
             </View>
         )
