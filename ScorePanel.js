@@ -25,7 +25,6 @@ export default class ScorePanel extends React.Component {
             // width: "50%",
             // height: "100%",
             backgroundColor: background,
-            padding: 1,
             alignContent: "center",
             justifyContent: "center",
           },
@@ -40,7 +39,6 @@ export default class ScorePanel extends React.Component {
             justifyContent: "space-evenly",
             alignContent: "center",
             flex: 3,
-            // padding:100,
             margin: 100
           },
         
@@ -52,7 +50,6 @@ export default class ScorePanel extends React.Component {
             alignItems:"stretch",
             // borderWidth: 1,
             borderColor:"black",
-            // padding:"100",
             margin:"4"
           },
         button: {
@@ -62,13 +59,10 @@ export default class ScorePanel extends React.Component {
             width: "100%",
             height: "100%",
             borderStyle:"solid",
-            // borderWidth:1,
+            borderWidth:1,
             borderColor:"orange",
-            paddingVertical:"10",
-            padding:10,
             textAlign:"center",
             margin: "100",
-            padding:"100"
 
         }
     }

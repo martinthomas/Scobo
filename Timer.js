@@ -32,7 +32,6 @@ export default class Timer extends React.Component {
         justifyContent: "center",
         flex: 0.45,
         backgroundColor: "grey",
-        padding: 10,
         borderRadius: 2.5,
       },
       timerexpire: {
@@ -42,7 +41,6 @@ export default class Timer extends React.Component {
         justifyContent: "center",
         flex: 0.45,
         backgroundColor: "yellow",
-        padding: 10,
         borderRadius: 2.5,
       },
       detail: {
