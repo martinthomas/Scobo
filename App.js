@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     backgroundColor: 'black',
-    borderRadius: 2,
-    borderWidth: 2,
-    borderColor:"green"
+    // borderRadius: 2,
+    // borderWidth: 2,
+    // borderColor:"green"
   },
 
 });

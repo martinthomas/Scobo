@@ -20,25 +20,27 @@ export default class ScorePanel extends React.Component {
         score: {
             borderWidth: 2,
             borderRadius: 2,
-            // borderColor: "pink",
+            borderColor: "pink",
             flex: 1,
             // width: "50%",
             // height: "100%",
             backgroundColor: background,
-            alignContent: "center",
+            alignItems: "center",
             justifyContent: "center",
           },
 
         detail: {
-            fontSize: 96,
+            fontSize: 128,
+            fontWeight: "bold",
             color: color,
             // borderStyle: "dashed",
             // borderColor: "grey",
             // borderWidth: 1,
             textAlign: "center",
-            justifyContent: "space-evenly",
-            alignContent: "center",
+            // justifyContent: "space-evenly",
             flex: 3,
+            padding: 64,
+            margin:64
           },
         
         buttoncontainer: {
@@ -46,8 +48,7 @@ export default class ScorePanel extends React.Component {
             width: "100%",
             flexDirection: "row",
             justifyContent: "space-evenly",
-            alignItems:"stretch",
-            // borderWidth: 1,
+            borderWidth: 1,
             borderColor:"black",
           },
         button: {
@@ -56,9 +57,9 @@ export default class ScorePanel extends React.Component {
             color: "black",
             width: "100%",
             height: "100%",
-            borderStyle:"solid",
-            borderWidth:1,
-            borderColor:"orange",
+            // borderStyle:"solid",
+            // borderWidth:1,
+            // borderColor:"orange",
             textAlign:"center",
         }
     }

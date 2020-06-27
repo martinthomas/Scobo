@@ -44,11 +44,11 @@ export default class Timer extends React.Component {
         borderRadius: 2.5,
       },
       detail: {
-        fontSize: 72,
+        fontSize: 96,
         color: "white",
+        fontWeight: "bold",
         textAlign: "center",
         justifyContent: "center",
-        alignSelf:"center"
       },
   })};
 
