@@ -59,7 +59,7 @@ export default class Timer extends React.Component {
         // borderColor: "yellow",
       },
       buttoncontainer: {
-        flex:1,
+        flex: 1,
         // width: "12%",
         // height:"100%",
         // padding: "30",
@@ -94,7 +94,16 @@ export default class Timer extends React.Component {
   }
 
   doReset = () => {
-    this.setState({ seconds: this.state.total })
+    if (this.state.running == false) this.setState({ seconds: this.state.total })
+  }
+
+  timeFormat = () => {
+    let minutes, seconds = 0;
+    minutes = Math.floor(this.state.seconds / 60)
+    seconds = this.state.seconds % 60
+    let minstr = "0" + minutes
+    let secstr = seconds > 9 ? "" + seconds : "0" + seconds
+    return minstr + ":" + secstr
   }
 
   render() {
@@ -107,7 +116,7 @@ export default class Timer extends React.Component {
           <View style={this.styles.timecontainer}>
             <TouchableOpacity onPress={this.toggleClock}>
               <Text style={this.styles.detail}>
-                Seconds: {this.state.seconds}
+                {this.timeFormat()}
               </Text>
             </TouchableOpacity>
           </View>
