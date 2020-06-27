@@ -30,7 +30,7 @@ export default class ScorePanel extends React.Component {
           },
 
         detail: {
-            fontSize: 172,
+            fontSize: 96,
             color: color,
             // borderStyle: "dashed",
             // borderColor: "grey",
@@ -39,7 +39,6 @@ export default class ScorePanel extends React.Component {
             justifyContent: "space-evenly",
             alignContent: "center",
             flex: 3,
-            margin: 100
           },
         
         buttoncontainer: {
@@ -50,7 +49,6 @@ export default class ScorePanel extends React.Component {
             alignItems:"stretch",
             // borderWidth: 1,
             borderColor:"black",
-            margin:"4"
           },
         button: {
             fontSize: 64,
@@ -62,8 +60,6 @@ export default class ScorePanel extends React.Component {
             borderWidth:1,
             borderColor:"orange",
             textAlign:"center",
-            margin: "100",
-
         }
     }
     )
