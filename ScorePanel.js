@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native';
 
 export default class ScorePanel extends React.Component {
     constructor(props){
@@ -9,6 +9,7 @@ export default class ScorePanel extends React.Component {
     }
     
     createStyles(competitor) {
+        let w = Dimensions.get('window').width
         let color = "black";
         let background = "white";
         if (competitor=="red" )
@@ -18,9 +19,9 @@ export default class ScorePanel extends React.Component {
         }
     return StyleSheet.create({
         score: {
-            borderWidth: 2,
-            borderRadius: 2,
-            borderColor: "pink",
+            borderWidth: 1,
+            // borderRadius: 2,
+            // borderColor: "pink",
             flex: 1,
             // width: "50%",
             // height: "100%",
@@ -30,7 +31,7 @@ export default class ScorePanel extends React.Component {
           },
 
         detail: {
-            fontSize: 128,
+            fontSize: w*0.24,
             fontWeight: "bold",
             color: color,
             // borderStyle: "dashed",
@@ -39,8 +40,8 @@ export default class ScorePanel extends React.Component {
             textAlign: "center",
             // justifyContent: "space-evenly",
             flex: 3,
-            padding: 64,
-            margin:64
+            // padding: 32,
+            margin:48
           },
         
         buttoncontainer: {
@@ -52,8 +53,9 @@ export default class ScorePanel extends React.Component {
             borderColor:"black",
           },
         button: {
-            fontSize: 64,
-            flex: 2,
+            fontSize: w*0.07,
+            fontWeight:"bold",
+            flex: 1,
             color: "black",
             width: "100%",
             height: "100%",
