@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 
 export default class Timer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { seconds: 90, running: false };
+    this.state = { total: 90, seconds: 90, running: false };
     this.styles = this.createCss();
   }
 
   tick() {
-    if (this.state.seconds && this.state.running){
+    if (this.state.seconds && this.state.running) {
       this.setState(state => ({
         seconds: state.seconds - 1
       }));
@@ -23,8 +23,8 @@ export default class Timer extends React.Component {
   componentWillUnmount() {
     clearInterval(this.interval);
   }
-  createCss(){
-    let w = Dimensions.get('window').width
+  createCss() {
+    let h = Dimensions.get('window').height
 
     return StyleSheet.create({
       timerbar: {
@@ -35,7 +35,7 @@ export default class Timer extends React.Component {
         flex: 0.3,
         backgroundColor: "grey",
         // borderRadius: 1,
-        flexDirection:"row",
+        flexDirection: "row",
       },
       timerexpire: {
         borderWidth: 2,
@@ -43,11 +43,11 @@ export default class Timer extends React.Component {
         alignContent: "center",
         justifyContent: "center",
         flex: 0.3,
-        backgroundColor: "yellow",
+        backgroundColor: "gold",
         borderRadius: 1,
       },
       detail: {
-        fontSize: w*0.09,
+        fontSize: h * 0.15,
         color: "white",
         fontWeight: "bold",
         textAlign: "center",
@@ -56,68 +56,76 @@ export default class Timer extends React.Component {
       timecontainer: {
         flex: 5,
         // borderWidth: 1,  
-        borderColor:"yellow",
+        // borderColor: "yellow",
       },
       buttoncontainer: {
-        // flex:1,
-        width: "10%",
+        flex:1,
+        // width: "12%",
         // height:"100%",
+        // padding: "30",
         flexDirection: "column",
         justifyContent: "center",
         // alignItems:"center",
-        alignContent:"space-around",
-        borderWidth: 1,
+        alignContent: "space-around",
+        // borderWidth: 1,
         // borderColor:"red",
         // borderStyle:"dashed"
       },
       button: {
-        fontSize: w*0.025,
-        fontWeight:"bold",
+        fontSize: h * 0.048,
+        fontWeight: "bold",
         // flex: 1,
+        // margin: "25",
         color: "black",
         // width: "50%",
         // height: "30%",
         // borderStyle:"solid",
-        borderWidth:1,
+        // borderWidth:1,
         // borderColor:"orange",
-        textAlign:"center",
-    }
-  })};
+        textAlign: "center",
+      }
+    })
+  };
 
-startClock = () => {
-    this.setState({ running: true})
-}
-stopClock = () => {
-  this.setState({ running: false})
-}
+  toggleClock = () => {
+    if (this.state.running) {
+      this.setState({ running: false })
+    } else { this.setState({ running: true }) }
+  }
+
+  doReset = () => {
+    this.setState({ seconds: this.state.total })
+  }
 
   render() {
-    if (this.state.seconds > 0){
+    if (this.state.seconds > 0) {
       return (
         <View style={this.styles.timerbar}>
           <View style={this.styles.buttoncontainer}>
-            <TouchableOpacity><Text style={this.styles.button} onPress={this.startClock}>Start</Text></TouchableOpacity>
+            <TouchableOpacity><Text style={this.styles.button}>Adjust</Text></TouchableOpacity>
           </View>
           <View style={this.styles.timecontainer}>
-            <Text style={this.styles.detail}>
-              Seconds: {this.state.seconds}
-            </Text>
+            <TouchableOpacity onPress={this.toggleClock}>
+              <Text style={this.styles.detail}>
+                Seconds: {this.state.seconds}
+              </Text>
+            </TouchableOpacity>
           </View>
           <View style={this.styles.buttoncontainer}>
-          <TouchableOpacity><Text style={this.styles.button} onPress={this.stopClock} >Stop</Text></TouchableOpacity>
+            <TouchableOpacity onPress={this.doReset}><Text style={this.styles.button}>Reset</Text></TouchableOpacity>
           </View>
         </View>
       );
-  
+
     } else {
       return (
         <View style={this.styles.timerexpire}>
-        <Text style={this.styles.detail }>
-          Seconds: {this.state.seconds}
-        </Text>
+          <Text style={this.styles.detail}>
+            Seconds: {this.state.seconds}
+          </Text>
         </View>
       );
     }
-  } 
+  }
 }
 

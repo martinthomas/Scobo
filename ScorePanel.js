@@ -4,12 +4,12 @@ import { Image, StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'rea
 export default class ScorePanel extends React.Component {
     constructor(props){
         super(props);
-        this.state = {score : 0};
+        this.state = {score :0};
         this.styles = this.createStyles(props.color);
     }
     
     createStyles(competitor) {
-        let w = Dimensions.get('window').width
+        let h = Dimensions.get('window').height
         let color = "black";
         let background = "white";
         if (competitor=="red" )
@@ -31,7 +31,7 @@ export default class ScorePanel extends React.Component {
           },
 
         detail: {
-            fontSize: w*0.24,
+            fontSize: h*0.4,
             fontWeight: "bold",
             color: color,
             // borderStyle: "dashed",
@@ -53,7 +53,7 @@ export default class ScorePanel extends React.Component {
             borderColor:"black",
           },
         button: {
-            fontSize: w*0.07,
+            fontSize: h*0.1,
             fontWeight:"bold",
             flex: 1,
             color: "black",
